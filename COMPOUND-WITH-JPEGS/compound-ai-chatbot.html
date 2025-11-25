@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Peptide Assistant | The Compound</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #0A0A0A; --accent: #00F5FF; --text: #FFFFFF; --text-dim: #999999; --bg-dark: #050505; --bg-card: #111111; --border: #222222; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Manrope', sans-serif; background: var(--bg-dark); color: var(--text); }
+        nav { background: rgba(5,5,5,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--accent); text-decoration: none; letter-spacing: 2px; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text); text-decoration: none; }
+        .nav-links a:hover { color: var(--accent); }
+        .content { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; text-align: center; }
+        h1 { font-family: 'Bebas Neue', sans-serif; font-size: 4rem; background: linear-gradient(135deg, #FFF, #00F5FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; }
+        .btn { display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #00F5FF, #0080FF); color: var(--primary); text-decoration: none; border-radius: 50px; font-weight: 800; margin: 2rem 0.5rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/index.html" class="logo">THE COMPOUND</a>
+            <ul class="nav-links">
+                <li><a href="/peptide-library-index.html">Peptides</a></li>
+                <li><a href="/shop-page.html">Shop</a></li>
+                <li><a href="/getting-started-guide.html">Learn</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content">
+        <h1>AI Peptide Assistant</h1>
+        <p>Get instant answers about peptides, dosing, safety, and protocols</p>
+        <button class="btn" onclick="window.chatbase('open')">Start Chat</button>
+    </div>
+    <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="I_79-CRjDdOyGzDiEk50h";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+</body>
+</html>

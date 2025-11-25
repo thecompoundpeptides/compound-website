@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPC-157 - Body Protection Compound | The Compound</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0A0A0A;
+            --accent: #00F5FF;
+            --success: #00FF88;
+            --danger: #FF0040;
+            --text: #FFFFFF;
+            --text-dim: #999999;
+            --bg-dark: #050505;
+            --bg-card: #111111;
+            --border: #222222;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        nav {
+            background: rgba(5, 5, 5, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--accent);
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .peptide-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), transparent);
+            border-radius: 20px;
+        }
+
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            background: linear-gradient(135deg, #FFFFFF, #00F5FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .category-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--success);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+        }
+
+        .key-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .benefit-item {
+            background: rgba(0, 245, 255, 0.05);
+            border: 1px solid var(--accent);
+            border-radius: 10px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .benefit-icon {
+            font-size: 2rem;
+        }
+
+        .dosage-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        .dosage-table th,
+        .dosage-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .dosage-table th {
+            background: rgba(0, 245, 255, 0.1);
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .warning-box {
+            background: rgba(255, 0, 64, 0.1);
+            border: 1px solid var(--danger);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .warning-box h4 {
+            color: var(--danger);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box {
+            background: rgba(0, 245, 255, 0.1);
+            border: 1px solid var(--accent);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .info-box h4 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(0, 255, 136, 0.1));
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00F5FF, #0080FF);
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-dim);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/index.html" class="logo">THE COMPOUND</a>
+            <ul class="nav-links">
+                <li><a href="/peptide-library-index.html">All Peptides</a></li>
+                <li><a href="/shop-page.html">Shop</a></li>
+                <li><a href="/compound-ai-chatbot.html">AI Assistant</a></li>
+                <li><a href="/getting-started-guide.html">Guide</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="peptide-header">
+            <div class="category-badge">Healing & Recovery</div>
+            <h1>BPC-157</h1>
+            <p class="subtitle">Body Protection Compound - The gold standard peptide for accelerated healing, tissue repair, and inflammation reduction</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Overview</h2>
+            <p>BPC-157 (Body Protection Compound 157) is a synthetic peptide consisting of 15 amino acids derived from a protective protein found in the stomach. This remarkable peptide has gained significant attention in the medical and athletic communities for its exceptional healing properties and safety profile.</p>
+            
+            <p>Originally discovered in human gastric juice, BPC-157 has demonstrated the ability to accelerate healing of muscles, tendons, ligaments, bones, and nerves. It's particularly effective for injuries that typically heal slowly or incompletely, making it a favorite among athletes and those recovering from surgery or chronic injuries.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Key Benefits</h2>
+            <div class="key-benefits">
+                <div class="benefit-item">
+                    <span class="benefit-icon">🏃</span>
+                    <div>
+                        <strong>Accelerated Healing</strong><br>
+                        Speeds up recovery from injuries by 2-3x
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">💪</span>
+                    <div>
+                        <strong>Tendon & Ligament Repair</strong><br>
+                        Specifically targets connective tissue
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">🔥</span>
+                    <div>
+                        <strong>Anti-Inflammatory</strong><br>
+                        Reduces inflammation systemically
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">🧠</span>
+                    <div>
+                        <strong>Neuroprotective</strong><br>
+                        Supports nerve healing and brain health
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">🩸</span>
+                    <div>
+                        <strong>Improved Blood Flow</strong><br>
+                        Enhances angiogenesis and circulation
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">🛡️</span>
+                    <div>
+                        <strong>Gut Health</strong><br>
+                        Heals intestinal damage and ulcers
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>How It Works</h2>
+            
+            <h3>Mechanism of Action</h3>
+            <p>BPC-157 works through multiple pathways to promote healing:</p>
+            <ul>
+                <li><strong>Growth Factor Modulation:</strong> Increases expression of growth hormone receptors</li>
+                <li><strong>Angiogenesis:</strong> Promotes formation of new blood vessels</li>
+                <li><strong>Collagen Production:</strong> Stimulates collagen synthesis for tissue repair</li>
+                <li><strong>Nitric Oxide System:</strong> Modulates NO system for improved blood flow</li>
+                <li><strong>Anti-Inflammatory:</strong> Reduces pro-inflammatory cytokines</li>
+            </ul>
+
+            <h3>Unique Properties</h3>
+            <p>What makes BPC-157 special is its stability in the human gastric environment and its systemic healing effects regardless of administration route. It appears to organize and direct the healing process rather than simply accelerating it.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Dosing Protocol</h2>
+            
+            <div class="info-box">
+                <h4>Standard Dosing Guidelines</h4>
+                <p>The following are commonly used protocols based on research and clinical experience.</p>
+            </div>
+
+            <table class="dosage-table">
+                <thead>
+                    <tr>
+                        <th>Purpose</th>
+                        <th>Dose Range</th>
+                        <th>Frequency</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>General Healing</td>
+                        <td>250-500 mcg</td>
+                        <td>Once daily</td>
+                        <td>4-12 weeks</td>
+                    </tr>
+                    <tr>
+                        <td>Acute Injury</td>
+                        <td>500-1000 mcg</td>
+                        <td>Twice daily</td>
+                        <td>2-4 weeks</td>
+                    </tr>
+                    <tr>
+                        <td>Maintenance</td>
+                        <td>250 mcg</td>
+                        <td>Every other day</td>
+                        <td>Ongoing</td>
+                    </tr>
+                    <tr>
+                        <td>Gut Health</td>
+                        <td>250-500 mcg</td>
+                        <td>Once daily (oral)</td>
+                        <td>4-8 weeks</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Administration Methods</h3>
+            <ul>
+                <li><strong>Subcutaneous Injection:</strong> Most common, inject near injury site if possible</li>
+                <li><strong>Intramuscular:</strong> For deep tissue injuries</li>
+                <li><strong>Oral:</strong> Effective for gut-related issues</li>
+                <li><strong>Topical:</strong> Some users report success with transdermal application</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Clinical Applications</h2>
+            
+            <h3>Sports Injuries</h3>
+            <ul>
+                <li>Tendon tears (Achilles, rotator cuff, tennis elbow)</li>
+                <li>Ligament damage (ACL, MCL)</li>
+                <li>Muscle strains and tears</li>
+                <li>Stress fractures</li>
+            </ul>
+
+            <h3>Gastrointestinal Issues</h3>
+            <ul>
+                <li>Inflammatory Bowel Disease (IBD)</li>
+                <li>Leaky gut syndrome</li>
+                <li>Gastric ulcers</li>
+                <li>GERD and acid reflux</li>
+            </ul>
+
+            <h3>Neurological Support</h3>
+            <ul>
+                <li>Traumatic brain injury recovery</li>
+                <li>Nerve damage repair</li>
+                <li>Depression and anxiety (emerging research)</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Safety & Side Effects</h2>
+            
+            <p>BPC-157 has an excellent safety profile with no significant side effects reported in research studies. However, users should be aware of:</p>
+
+            <div class="info-box">
+                <h4>Reported Effects</h4>
+                <ul>
+                    <li>Mild fatigue initially (typically resolves)</li>
+                    <li>Slight dizziness (rare)</li>
+                    <li>Increased hunger (some users)</li>
+                    <li>Vivid dreams (occasional)</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <h4>Contraindications</h4>
+                <ul>
+                    <li>Active cancer (theoretical concern about angiogenesis)</li>
+                    <li>Pregnancy or breastfeeding (no safety data)</li>
+                    <li>Children under 18 (unless medically supervised)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Stacking & Combinations</h2>
+            
+            <p>BPC-157 works synergistically with other peptides:</p>
+            
+            <h3>Popular Stacks</h3>
+            <ul>
+                <li><strong>BPC-157 + TB-500:</strong> Ultimate healing stack for injuries</li>
+                <li><strong>BPC-157 + GHK-Cu:</strong> Tissue repair and anti-aging</li>
+                <li><strong>BPC-157 + CJC-1295:</strong> Enhanced recovery and growth</li>
+                <li><strong>BPC-157 + Thymosin Beta-4:</strong> Comprehensive tissue regeneration</li>
+            </ul>
+        </div>
+
+        <div class="cta-section">
+            <h2>Ready to Experience BPC-157?</h2>
+            <p>Join thousands who have accelerated their healing with this remarkable peptide</p>
+            <div class="cta-buttons">
+                <a href="/shop-page.html" class="btn btn-primary">Order BPC-157</a>
+                <a href="/compound-ai-chatbot.html" class="btn btn-secondary">Ask Our AI</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 The Compound Peptides. For educational purposes only. Not medical advice.</p>
+    </footer>
+</body>
+</html>

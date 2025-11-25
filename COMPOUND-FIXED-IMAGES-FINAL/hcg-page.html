@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCG 5000iu - Human Chorionic Gonadotropin | The Compound</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0A0A0A;
+            --accent: #00F5FF;
+            --success: #00FF88;
+            --danger: #FF0040;
+            --text: #FFFFFF;
+            --text-dim: #999999;
+            --bg-dark: #050505;
+            --bg-card: #111111;
+            --border: #222222;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Manrope', sans-serif; background: var(--bg-dark); color: var(--text); line-height: 1.6; }
+        nav { background: rgba(5, 5, 5, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--accent); text-decoration: none; letter-spacing: 2px; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text); text-decoration: none; transition: color 0.3s; font-weight: 600; }
+        .nav-links a:hover { color: var(--accent); }
+        .container { max-width: 1000px; margin: 0 auto; padding: 3rem 2rem; }
+        .peptide-header { text-align: center; margin-bottom: 4rem; padding: 3rem; background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), transparent); border-radius: 20px; }
+        h1 { font-family: 'Bebas Neue', sans-serif; font-size: 4rem; background: linear-gradient(135deg, #FFFFFF, #00F5FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; letter-spacing: 2px; }
+        .category-badge { display: inline-block; background: var(--accent); color: var(--primary); padding: 0.5rem 1.5rem; border-radius: 50px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; }
+        .subtitle { font-size: 1.2rem; color: var(--text-dim); max-width: 600px; margin: 0 auto; }
+        .content-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; margin-bottom: 2rem; }
+        h2 { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: var(--accent); margin-bottom: 1.5rem; letter-spacing: 1px; }
+        h3 { font-size: 1.5rem; color: var(--success); margin-top: 2rem; margin-bottom: 1rem; }
+        p { margin-bottom: 1rem; line-height: 1.8; }
+        ul { margin: 1rem 0; padding-left: 2rem; }
+        li { margin-bottom: 0.75rem; }
+        .key-benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .benefit-item { background: rgba(0, 245, 255, 0.05); border: 1px solid var(--accent); border-radius: 10px; padding: 1.5rem; display: flex; align-items: center; gap: 1rem; }
+        .benefit-icon { font-size: 2rem; }
+        .dosage-table { width: 100%; border-collapse: collapse; margin: 2rem 0; }
+        .dosage-table th, .dosage-table td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+        .dosage-table th { background: rgba(0, 245, 255, 0.1); font-weight: 800; color: var(--accent); }
+        .info-box { background: rgba(0, 245, 255, 0.1); border: 1px solid var(--accent); border-radius: 10px; padding: 1.5rem; margin: 2rem 0; }
+        .info-box h4 { color: var(--accent); margin-bottom: 0.5rem; }
+        .warning-box { background: rgba(255, 0, 64, 0.1); border: 1px solid var(--danger); border-radius: 10px; padding: 1.5rem; margin: 2rem 0; }
+        .warning-box h4 { color: var(--danger); margin-bottom: 0.5rem; }
+        .cta-section { background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(0, 255, 136, 0.1)); border-radius: 20px; padding: 3rem; text-align: center; margin-top: 3rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; }
+        .btn { padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s; display: inline-block; }
+        .btn-primary { background: linear-gradient(135deg, #00F5FF, #0080FF); color: var(--primary); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3); }
+        .btn-secondary { background: transparent; border: 2px solid var(--accent); color: var(--accent); }
+        .btn-secondary:hover { background: var(--accent); color: var(--primary); }
+        footer { text-align: center; padding: 2rem; margin-top: 4rem; border-top: 1px solid var(--border); color: var(--text-dim); }
+        @media (max-width: 768px) { h1 { font-size: 3rem; } .cta-buttons { flex-direction: column; } .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/index.html" class="logo">THE COMPOUND</a>
+            <ul class="nav-links">
+                <li><a href="/peptide-library-index.html">All Peptides</a></li>
+                <li><a href="/shop-page.html">Shop</a></li>
+                <li><a href="/compound-ai-chatbot.html">AI Assistant</a></li>
+                <li><a href="/getting-started-guide.html">Guide</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="peptide-header">
+            <div class="category-badge">Hormone Optimization</div>
+            <h1>HCG</h1>
+            <p class="subtitle">Essential hormone for testosterone production, fertility, and hormonal balance in men and women</p>
+        </div>
+        
+        <div class="content-section">
+            <h2>Overview</h2>
+            <p>Human Chorionic Gonadotropin (HCG) is a naturally occurring hormone that plays crucial roles in both male and female reproductive health. In therapeutic applications, HCG is used to stimulate natural testosterone production in men, enhance fertility in both sexes, and support weight loss protocols.</p>
+            <p>HCG mimics luteinizing hormone (LH), signaling the testes to produce testosterone and preventing testicular atrophy during testosterone replacement therapy. It's also essential for maintaining fertility and can be used as part of comprehensive hormone optimization protocols.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2>Key Benefits</h2>
+            <div class="key-benefits">
+                <div class="benefit-item"><span class="benefit-icon">⚡</span><div><strong>Testosterone Boost</strong><br>Stimulates natural production</div></div>
+                <div class="benefit-item"><span class="benefit-icon">👶</span><div><strong>Fertility Support</strong><br>Improves sperm production</div></div>
+                <div class="benefit-item"><span class="benefit-icon">🔥</span><div><strong>Fat Loss</strong><br>Enhances metabolism</div></div>
+                <div class="benefit-item"><span class="benefit-icon">💪</span><div><strong>Preserve Muscle</strong><br>Maintains lean mass</div></div>
+                <div class="benefit-item"><span class="benefit-icon">🎯</span><div><strong>Hormone Balance</strong><br>Optimizes endocrine function</div></div>
+                <div class="benefit-item"><span class="benefit-icon">🛡️</span><div><strong>Testicular Health</strong><br>Prevents atrophy</div></div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2>Dosing Protocol</h2>
+            <table class="dosage-table">
+                <thead>
+                    <tr><th>Purpose</th><th>Dose</th><th>Frequency</th><th>Duration</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>TRT Support</td><td>250-500 IU</td><td>2-3x weekly</td><td>Ongoing</td></tr>
+                    <tr><td>PCT (Post Cycle)</td><td>1000-2000 IU</td><td>Every 3 days</td><td>3-4 weeks</td></tr>
+                    <tr><td>Fertility</td><td>1500-3000 IU</td><td>2-3x weekly</td><td>3-6 months</td></tr>
+                    <tr><td>Weight Loss</td><td>125-200 IU</td><td>Daily</td><td>3-6 weeks</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="content-section">
+            <h2>Clinical Applications</h2>
+            <ul>
+                <li>Hypogonadism treatment</li>
+                <li>Testosterone replacement therapy adjunct</li>
+                <li>Male and female infertility</li>
+                <li>Post-cycle therapy (PCT)</li>
+                <li>HCG diet protocol</li>
+                <li>Cryptorchidism in young males</li>
+                <li>Delayed puberty</li>
+            </ul>
+        </div>
+        
+        <div class="cta-section">
+            <h2>Ready to Experience HCG?</h2>
+            <p>Restore hormonal balance and optimize your endocrine system naturally</p>
+            <div class="cta-buttons">
+                <a href="/shop-page.html" class="btn btn-primary">Order HCG</a>
+                <a href="/compound-ai-chatbot.html" class="btn btn-secondary">Ask Our AI</a>
+            </div>
+        </div>
+    </div>
+    <footer><p>&copy; 2025 The Compound Peptides. For educational purposes only. Not medical advice.</p></footer>
+</body>
+</html>

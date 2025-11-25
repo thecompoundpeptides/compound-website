@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peptide Library - All Peptides | The Compound</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0A0A0A;
+            --accent: #00F5FF;
+            --text: #FFFFFF;
+            --text-dim: #999999;
+            --bg-dark: #050505;
+            --bg-card: #111111;
+            --border: #222222;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Manrope', sans-serif; background: var(--bg-dark); color: var(--text); }
+        nav { background: rgba(5,5,5,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--accent); text-decoration: none; letter-spacing: 2px; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text); text-decoration: none; }
+        .nav-links a:hover { color: var(--accent); }
+        .header { text-align: center; padding: 4rem 2rem 2rem; }
+        h1 { font-family: 'Bebas Neue', sans-serif; font-size: 4rem; background: linear-gradient(135deg, #FFF, #00F5FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; }
+        .subtitle { color: var(--text-dim); font-size: 1.2rem; }
+        .peptides-grid { max-width: 1400px; margin: 0 auto; padding: 2rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem; }
+        .peptide-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 15px; padding: 2rem; transition: all 0.3s; position: relative; overflow: hidden; }
+        .peptide-card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 10px 30px rgba(0,245,255,0.2); }
+        .peptide-name { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--accent); margin-bottom: 0.5rem; }
+        .peptide-category { color: var(--text-dim); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 1rem; }
+        .peptide-description { color: var(--text); line-height: 1.5; margin-bottom: 1.5rem; }
+        .peptide-actions { display: flex; gap: 1rem; }
+        .btn { padding: 0.75rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; text-align: center; flex: 1; transition: all 0.3s; }
+        .btn-primary { background: linear-gradient(135deg, #00F5FF, #0080FF); color: var(--primary); }
+        .btn-primary:hover { transform: scale(1.05); box-shadow: 0 5px 20px rgba(0,245,255,0.5); }
+        .btn-secondary { background: transparent; border: 2px solid var(--accent); color: var(--text); }
+        .btn-secondary:hover { background: var(--accent); color: var(--primary); }
+        footer { background: var(--bg-card); border-top: 1px solid var(--border); padding: 2rem; text-align: center; margin-top: 4rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/index.html" class="logo">THE COMPOUND</a>
+            <ul class="nav-links">
+                <li><a href="/shop-page.html">Shop</a></li>
+                <li><a href="/compound-ai-chatbot.html">AI Assistant</a></li>
+                <li><a href="/getting-started-guide.html">Getting Started</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="header">
+        <h1>Peptide Library</h1>
+        <p class="subtitle">Explore our complete collection of premium peptides</p>
+    </div>
+    
+    <div class="peptides-grid">
+        <div class="peptide-card">
+            <h2 class="peptide-name">BPC-157</h2>
+            <p class="peptide-category">Healing & Recovery</p>
+            <p class="peptide-description">Premium healing peptide for tissue repair, gut health, and inflammation reduction.</p>
+            <div class="peptide-actions">
+                <a href="/bpc-157-page.html" class="btn btn-secondary">Learn More</a>
+                <a href="/shop-page.html" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>
+        
+        <div class="peptide-card">
+            <h2 class="peptide-name">Semaglutide</h2>
+            <p class="peptide-category">Weight Management</p>
+            <p class="peptide-description">GLP-1 agonist for appetite control, weight loss, and metabolic health.</p>
+            <div class="peptide-actions">
+                <a href="/semaglutide-page.html" class="btn btn-secondary">Learn More</a>
+                <a href="/shop-page.html" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>
+        
+        <div class="peptide-card">
+            <h2 class="peptide-name">TB-500</h2>
+            <p class="peptide-category">Injury Recovery</p>
+            <p class="peptide-description">Powerful recovery peptide for flexibility, healing, and injury prevention.</p>
+            <div class="peptide-actions">
+                <a href="/tb-500-page.html" class="btn btn-secondary">Learn More</a>
+                <a href="/shop-page.html" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>
+        
+        <div class="peptide-card">
+            <h2 class="peptide-name">Tirzepatide</h2>
+            <p class="peptide-category">Weight Management</p>
+            <p class="peptide-description">Dual GIP/GLP-1 agonist for superior weight loss and metabolic benefits.</p>
+            <div class="peptide-actions">
+                <a href="/tirzepatide-page.html" class="btn btn-secondary">Learn More</a>
+                <a href="/shop-page.html" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>
+        
+        <div class="peptide-card">
+            <h2 class="peptide-name">CJC-1295</h2>
+            <p class="peptide-category">Growth Hormone</p>
+            <p class="peptide-description">Growth hormone releasing peptide for muscle growth and recovery.</p>
+            <div class="peptide-actions">
+                <a href="/cjc-1295-page.html" class="btn btn-secondary">Learn More</a>
+                <a href="/shop-page.html" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>
+        
+        <div class="peptide-card">
+            <h2 class="peptide-name">Ipamorelin</h2>
+            <p class="peptide-category">Growth Hormone</p>
+            <p class="peptide-description">Selective GH secretagogue for lean muscle, recovery, and anti-aging.</p>
+            <div class="peptide-actions">
+                <a href="/ipamorelin-page.html" class="btn btn-secondary">Learn More</a>
+                <a href="/shop-page.html" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>
+        
+        <div class="peptide-card">
+            <h2 class="peptide-name">MOTS-c</h2>
+            <p class="peptide-category">Performance</p>
+            <p class="peptide-description">Mitochondrial peptide for enhanced metabolism and endurance.</p>
+            <div class="peptide-actions">
+                <a href="/mots-c-page.html" class="btn btn-secondary">Learn More</a>
+                <a href="/shop-page.html" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>
+        
+        <div class="peptide-card">
+            <h2 class="peptide-name">Epithalon</h2>
+            <p class="peptide-category">Longevity</p>
+            <p class="peptide-description">Telomerase activator for anti-aging, longevity, and cellular health.</p>
+            <div class="peptide-actions">
+                <a href="/epithalon-page.html" class="btn btn-secondary">Learn More</a>
+                <a href="/shop-page.html" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>
+        
+        <div class="peptide-card">
+            <h2 class="peptide-name">GHK-Cu</h2>
+            <p class="peptide-category">Longevity</p>
+            <p class="peptide-description">Copper peptide for skin health, collagen production, and healing.</p>
+            <div class="peptide-actions">
+                <a href="/ghk-cu-page.html" class="btn btn-secondary">Learn More</a>
+                <a href="/shop-page.html" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>
+        
+        <div class="peptide-card">
+            <h2 class="peptide-name">NAD+</h2>
+            <p class="peptide-category">Longevity</p>
+            <p class="peptide-description">Cellular energy booster for DNA repair and healthy aging.</p>
+            <div class="peptide-actions">
+                <a href="/nad-page.html" class="btn btn-secondary">Learn More</a>
+                <a href="/shop-page.html" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>
+        
+        <div class="peptide-card">
+            <h2 class="peptide-name">PT-141</h2>
+            <p class="peptide-category">Performance</p>
+            <p class="peptide-description">Bremelanotide for enhanced libido and sexual function.</p>
+            <div class="peptide-actions">
+                <a href="/pt-141-page.html" class="btn btn-secondary">Learn More</a>
+                <a href="/shop-page.html" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>
+        
+        <div class="peptide-card">
+            <h2 class="peptide-name">AOD-9604</h2>
+            <p class="peptide-category">Weight Loss</p>
+            <p class="peptide-description">Fat-burning peptide that mimics natural growth hormone.</p>
+            <div class="peptide-actions">
+                <a href="/aod-9604-page.html" class="btn btn-secondary">Learn More</a>
+                <a href="/shop-page.html" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 The Compound Peptides. For educational purposes only. Not medical advice.</p>
+    </footer>
+</body>
+</html>
